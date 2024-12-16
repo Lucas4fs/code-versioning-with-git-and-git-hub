@@ -1,0 +1,105 @@
+//Fazer apresentação introdutória através do Power Point
+
+//Abrir projeto no VS CODE e rodar o codigo, mostrar que funciona...
+
+Abrir o Git CMD para criar um repositorio e integrar com git hub
+
+Dentro do GIT CMD acessar a pasta da máquina que está o projeto:
+
+cd Downloads
+cd "Projeto IM& DICAP"
+cd vitalicio
+cd app
+
+//Iniciar um novo processo 
+
+git init
+
+//depois desse comando verá que uma pasta oculta foi criada dentro da pasta do projeto (na maquina física)
+
+//configurar e-mail e nome de usuario do git
+
+git config --global user.email "lucasfonseca108.lf@gmail.com"
+ 
+git config --global user.name "lucas4fs"
+
+
+//Verificar se tem  um nome e e-mail associado ao git
+
+git config --global user.name
+
+git config --global user.email
+
+// ADicionar arquivos 
+
+git add .
+
+// comitar/criar uma nova etapa/nova branch
+
+git commit -m "Primeira Etapa"
+
+// Criar repositorio no Git Hub manualmente, entre nele e copie o endereço http
+
+//Conecte seu repositório local ao repositório remoto: *Se atente ao nome do projeto, tem que ser um que não foi usada usado antes
+
+git remote add nomeDoProjeto https://github.com/Lucas4fs/ProjetoGit2.git
+
+//envie os dados da maquina fisica para o git hub:
+
+git push -u nomeDoProjeto master
+git push -u projetogit master
+
+//conferir o git hub e ver se subiu os arquivos
+
+//digitar o comando no GIT CMD para ver o log dos commits
+
+git log
+
+//acessar o git hub , ir no repositorio e clicar em "Commits" do lado direito superior para ver os commits feitos
+
+//voltar no vs code, alterar o codigo, salvar e fazer commit novamente:
+
+git add .
+git commit -m "Segunda Etapa"
+git push -u projetogit master
+
+//voltar no git hub e visualizar novamente os commits no lado direito superior mostrando oque foi alterando no segundo commit feito
+
+//voltar para o vs code e tentar rodar o app denovo, não vai rodar pq o codigo foi modificado,
+
+//no git CMD  digitar o comando para pegar o codigo do commit que queremos voltar
+
+git log
+
+//depois, criar uma nova branch a partir do primeiro commit para poder ter acesso ao codigo que funcionava
+
+git checkout -b master_two e1291aefd30027a85260c201a6dd881332bfbadb
+
+//digitar o comando para ver em qual branch estou:
+
+git branch
+
+//mude  branch para mostrar que o codigo tambem muda dentro do vs code
+
+//mostrar que a branch ta na maquina fisica e ainda não subiu para o git hub, abrir o git hub para fazer isso
+
+git checkout + nome da branch
+
+//mostrar que na branch criada a partir do primeiro commit o codigo agora funciona
+
+//adicionar e fazer commit da nova branch:
+
+//salvar arquivo no vs code denovo
+
+git add .
+git commit -m "master two"
+
+//mostrar o retorno do cmd, onde fala que nada foi comprometido
+
+//fazer o push, subir para o git hub
+
+git push projetogit master_two
+
+//verificar no git hub
+
+
